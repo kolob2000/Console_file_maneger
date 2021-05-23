@@ -3,26 +3,28 @@ import shutil
 
 
 def make_file(file_name):
-    print('make file')
+    os.system('cls' if os.name == 'nt' else 'clear')
     try:
         if os.path.exists(file_name):
             print('FILE EXIST!')
         else:
             with open(file_name, 'a') as file:
-                print('file`s created')
+                print('FILE CREATED')
     except FileNotFoundError:
         print('INCORRECT INPUT')
 
 
 def remove_file(file_name):
+    os.system('cls' if os.name == 'nt' else 'clear')
     try:
         os.remove(file_name)
-        print('remove file')
+        print('FILE REMOVED')
     except FileNotFoundError:
-        print('file not found')
+        print('FILE NOT FOUND')
 
 
 def file_viewer(file_name):
+    os.system('cls' if os.name == 'nt' else 'clear')
     try:
         with open(file_name, 'r', encoding='utf-8') as file:
             for i in file.readlines():
@@ -34,13 +36,16 @@ def file_viewer(file_name):
 def file_writer(file_name):
     try:
         with open(file_name, 'a') as file:
-            file.writelines(input('Input text for writing: \n') + '\n')
+            file.writelines(input('INPUT TEXT FOR WRITING: \n') + '\n')
+            os.system('cls' if os.name == 'nt' else 'clear')
         print('WRITE INTO FILE')
     except FileNotFoundError:
+        os.system('cls' if os.name == 'nt' else 'clear')
         print('INCORRECT INPUT')
 
 
 def rename_file(file_name, new_name):
+    os.system('cls' if os.name == 'nt' else 'clear')
     try:
         os.rename(file_name, new_name)
         print('FILE`S RENAMED')
@@ -49,6 +54,7 @@ def rename_file(file_name, new_name):
 
 
 def copy_file(file_name, new_name):
+    os.system('cls' if os.name == 'nt' else 'clear')
     try:
         shutil.copy2(file_name, new_name)
         print('FILE`S COPIED')
@@ -64,6 +70,7 @@ def copy_file(file_name, new_name):
 
 
 def move_file(file_name, dist_name):
+    os.system('cls' if os.name == 'nt' else 'clear')
     try:
         shutil.move(file_name, dist_name)
         print('FILE`S MOVED')

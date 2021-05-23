@@ -11,6 +11,7 @@ def dir_viewer():
 
 
 def dir_change(path):
+    os.system('cls' if os.name == 'nt' else 'clear')
     if not os.path.exists(path):
         print('DIRECTORY NOT FOUND')
     else:
@@ -20,22 +21,25 @@ def dir_change(path):
 
 
 def make_dir(dir_name):
+    os.system('cls' if os.name == 'nt' else 'clear')
     if os.path.exists(dir_name):
         print('DIRECTORY EXIST')
     else:
         os.mkdir(dir_name)
-        print('make directory')
+        print('MAKED DIRECTORY')
 
 
 def remove_dir(dir_name):
+    os.system('cls' if os.name == 'nt' else 'clear')
     try:
         os.rmdir(dir_name)
-        print('remove directory')
+        print('REMOVE DIRECTORY')
     except FileNotFoundError:
         print('DIRECTORY NOT FOUND')
 
 
 def rename_dir(dir_name, new_name):
+    os.system('cls' if os.name == 'nt' else 'clear')
     try:
         os.rename(dir_name, new_name)
         print('FILE`S RENAMED')
@@ -44,6 +48,7 @@ def rename_dir(dir_name, new_name):
 
 
 def copy_dir(dir_name, new_name):
+    os.system('cls' if os.name == 'nt' else 'clear')
     try:
         shutil.copytree(dir_name, new_name)
         print('FILE`S COPIED')
@@ -58,6 +63,7 @@ def copy_dir(dir_name, new_name):
 
 
 def move_dir(dir_name, dist_name):
+    os.system('cls' if os.name == 'nt' else 'clear')
     try:
         shutil.move(dir_name, dist_name)
         print('DIRECTORY`S MOVED')
