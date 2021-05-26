@@ -75,3 +75,7 @@ def move_dir(dir_name, dist_name):
         print('PERMISSION DENIED')
     except FileExistsError:
         print('DIRECTORY EXISTS')
+
+
+if __name__ == '__main__':
+    print('hello, world')
