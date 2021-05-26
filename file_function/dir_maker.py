@@ -79,3 +79,10 @@ def move_dir(dir_name, dist_name):
 
 if __name__ == '__main__':
     print('hello, world')
+
+
+    def hello_Marat():
+        print('hello, Marat')
+
+
+    hello_Marat()
